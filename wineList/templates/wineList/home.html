@@ -1,0 +1,100 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+
+{% block jquery %}
+{% include 'wineList/snippet/sliderJquery.html' %}
+{% endblock %}
+
+{% block content %}
+
+<section id="slider">
+    <div class="row center-lg" id="content">
+      <div class="col-lg-12 blueberry">
+        <ul class="slides">
+          <li><img src='{% static "wineList/img/grapes.jpg" %}'</img></li>
+          <li><img src='{% static "wineList/img/landscape.jpg" %}'</img></li>
+          <li><img src='{% static "wineList/img/stand.jpg" %}'</img></li>
+          <li><img src='{% static "wineList/img/bottles.jpg" %}'</img></li>
+        </ul>
+      </div>
+    </div>
+</section>
+  <!--  PAIRING   -->
+<section id="pairing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h5>Pairing Your Wine With Food</h5>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form class="row">
+            <div class="col-lg-2">
+              <label>Cheese/nuts</label>
+              <select id="cheesNuts" class="form-control">
+                <option value="Low">feta</option>
+                <option value="Medium">goat cheese</option>
+                <option value="High">pine nuts</option>
+               </select>
+            </div>
+            <div class="col-lg-2">
+              <label>Meat/poultry</label>
+              <select id="meatPoultry" class="form-control">
+                <option value="Low">chicken</option>
+                <option value="Medium">turkey</option>
+                <option value="High">pork</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <label>Seafood</label>
+              <select id="seafood" class="form-control">
+                <option value="Low">fatty white fish</option>
+                <option value="Medium">oysters</option>
+                <option value="High"> scallops</option>
+                <option value="Low">lobster</option>
+                <option value="Medium">shrimp</option>
+                <option value="High">sushi</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <label>Fruits/Veggies</label>
+              <select id="fruitsVeggies" class="form-control">
+                <option value="Low">citrus</option>
+                <option value="Medium">green apple</option>
+                <option value="High">asparagus</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <label>Herbs/Spices/sauces</label>
+              <select id="herbsSpicesSauces" class="form-control">
+                <option value="Low">chives</option>
+                <option value="Medium">cilantro</option>
+                <option value="High">tarragon</option>
+                <option value="Medium">citrus</option>
+                <option value="High">light cream sauces</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <label>Deserts</label>
+              <select id="Deserts" class="form-control">
+                <option value="Low">sorbet</option>
+                <option value="Medium">key lime pie</option>
+                <option value="High">meringue</option>
+                <option value="High">mango</option>
+              </select>
+            </div>
+            <div class="container row" id="pairing-footer">
+              <div class="col-lg-2" id="set-btn" >
+                <button type="submit" id="pairingBtn">Your Choices</button>
+              </div>
+              <div class="col-lg-10">
+                <p>*Select one meal and obtaine the best wine type to pair with. Or chose a variety of foods and get the rigth wine for that combination.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+</section>
+
+{% endblock %}

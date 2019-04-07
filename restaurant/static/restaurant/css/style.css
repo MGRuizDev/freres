@@ -1,0 +1,403 @@
+*{
+
+}
+
+body{
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f5f4f0;
+  color: #484949;
+  margin: 0;
+  padding: 0;
+}
+
+/*------Global Elements-------*/
+img{
+  max-width: 100%;
+}
+.hide-mobile{
+  display: none;
+}
+p{
+  font-size: 14pt;
+}
+h2{
+  font-weight: bolder;
+}
+.bars{
+  background-color: #f5f4f0;
+  width: 100%;
+
+}
+.side-text{
+  padding: 30px;
+}
+
+
+/*-----Home Section------*/
+#biga {
+background-image: url('/static/restaurant/img/bigaX.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 300px;
+width: auto;
+height:300px;
+
+}
+
+/*-----header & Nav-----*/
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 4%;
+}
+#title{
+  font-size: 16pt;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+header i{
+  color: white;
+}
+#menu ul{
+  list-style-type: none;
+  background-color: rgba(192, 192, 192, 1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  text-align: left;
+  padding-top: 20px;
+  margin-top: 0;
+  z-index: 17;
+}
+#menu .exit-btn{
+  margin-bottom: 0.5em;
+  margin-top: -0.5em;
+  text-align: right;
+}
+
+#menu .exit-btn i{
+  color: black;
+  width: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#menu ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 18pt;
+  display: block; /*Allows to applied padding to links*/
+  width: 100%;
+  padding: 15px 0px;
+}
+#menu ul li a:hover{
+  color: white;
+}
+#welcome{
+  width: 100%;
+  height: 200px;;
+
+}
+#welcome img{
+  width: 100pt;
+  max-width: none;
+  margin: 3em auto 3em 35%;
+
+}
+
+
+
+#chef {
+  padding: 4%;
+  text-align: center;
+  line-height: 30pt;
+}
+
+
+#kitchen{
+  background-image: url("/static/restaurant/img/kitchenX.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 600px;
+  width: auto;
+  height:600px;
+}
+
+#food{
+  padding: 4%;
+  text-align: center;
+  line-height: 30pt;
+}
+
+
+
+#service {
+background-image: url("/static/restaurant/img/serviceX.jpeg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 600px;
+width: auto;
+height:600px;
+}
+
+
+
+#space{
+  padding: 4%;
+}
+.rooms {
+  padding-bottom: 40px;
+  flex-basis: 15%;
+}
+.rooms h5{
+  margin: 0;
+}
+
+#modal{
+  display: none;
+  /*background-image: url("/static/restaurant/img/espada.jpg");*/
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  content: normal; /*Div fixed without content dissapear, therefore this is need it*/
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.rooms #alamo:hover {
+  cursor: pointer;
+}
+.rooms #capis:hover {
+  cursor: pointer;
+}
+.rooms #jose:hover {
+  cursor: pointer;
+}
+.rooms #espada:hover {
+  cursor: pointer;
+}
+.rooms #terrace:hover {
+  cursor: pointer;
+}
+
+
+
+footer{
+  padding: 4% 4% 0% 4%;
+}
+footer p{
+  text-align: center;
+  font-size: 14pt;
+  line-height: 30pt;
+}
+#follow{
+  margin-top: 60px;
+}
+#follow ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+#follow ul li{
+  display: inline;
+  padding-right: 20px;
+}
+#follow ul li i{
+  font-size: 25px;
+  color: #B8B8B8;
+}
+#follow ul li i:hover{
+  color: black;
+}
+#copyright{
+  margin-bottom: 15px;
+
+}
+
+
+
+#reservation_form{
+  background-color: white;
+  margin: 0;
+  /*margin: 5% 8%;*/
+  box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0,0,0,0.2),
+    /* The second layer */
+    0 -10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 -10px 1px -4px rgba(0,0,0,0.2),
+     /* The third layer */
+    0 -20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 -20px 1px -9px rgba(0,0,0,0.2);
+    /* Padding for demo purposes */
+    padding: 0px;
+    /*padding: 30px;*/
+}
+
+#title-form {
+  font-size: 18pt;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin: 60px 100px;
+}
+#reservation_form form{
+  padding: 2% 1% 2% 1%;
+}
+#reservation_form h1{
+  text-align: center;
+  padding: 10px;
+}
+
+/*------------Query-------------*/
+
+@media only screen and (min-width: 480px) {
+
+ #reservation_form{
+  margin: 5% 8%;
+  padding: 30px;
+}
+}
+@media only screen and (min-width: 600px) {
+
+  #biga {
+  background-size: 100% 500px;
+  width: auto;
+  height:500px;
+  }
+  #welcome img{
+    width: 150pt;
+    max-width: none;
+    margin: 3em auto 3em 35%;
+  }
+  #modal{
+    background-size: 500px 300px;
+  }
+}
+@media only screen and (min-width: 960px) {
+
+  #reservation_form{
+    margin: 10% 15%;
+    padding: 30px;
+  }
+
+  #reservation_form form{
+    padding: 5% 6% 8% 6%;
+  }
+
+  .show-desktop{
+    display: block;
+  }
+  .hide-desktop{
+    display: none;
+  }
+
+  #menu ul{
+    position: inherit;
+    width: auto;
+    height: auto;
+    background: none;
+    display: flex;
+    padding-top: 0;
+    padding-right: 50px;
+  }
+  #menu ul li{
+    padding-right: 50px;
+  }
+  #menu ul li a{
+    color: white;
+    font-size: 14pt;
+  }
+  #menu ul li a:hover{
+    color: lightblue;
+  }
+  header{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #welcome img{
+    width: 180pt;
+    max-width: none;
+    margin: 6em auto 6em 40%;
+  }
+  #imgFood{
+    display: flex;
+  }
+  #biga {
+  background-size: 100% 550px;
+  width: auto;
+  height:550px;
+  }
+  #modal{
+    background-size: 650px 450px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #reservation_form form{
+    padding: 5% 8% 10% 8%;
+  }
+
+  #space{
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rooms {
+    padding-bottom: 15%;
+    flex-basis: 15%;
+  }
+  #biga {
+  background-size: 100% 600px;
+  width: auto;
+  height:600px;
+  }
+  #welcome img{
+    width: 200pt;
+    max-width: none;
+    margin: 6em auto 6em 40%;
+  }
+  #modal{
+    background-size: 750px 500px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+
+  #reservation_form{
+    margin: 10% 20%;
+    padding: 30px;
+  }
+
+  #reservation_form form{
+    padding: 8% 10% 15% 10%;
+  }
+
+  #chef {
+    display: flex;
+    justify-content: space-between;
+  }
+  #chef .side-text{
+    margin-left: 40px;
+  }
+  h2{
+    margin-bottom: 0;
+  }
+  #modal{
+    background-size: 850px 550px;
+  }
+}

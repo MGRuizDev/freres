@@ -1,0 +1,379 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.container{
+font-family: 'Noto Serif', serif;
+}
+
+
+/*    HEADER    */
+header{
+  padding-top: 5px;
+
+}
+#logo{
+  padding: 7px;
+}
+#logo h4{
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+/*    navigation    */
+
+#nav{
+  list-style-type: none;
+}
+#nav li{
+  display: inline;
+  padding: 10px;
+}
+#nav li a{
+  text-decoration: none;
+  color: #4f4b42;
+  font-size: 14px;
+}
+#nav li a:hover{
+  color: darkgrey;
+  text-decoration: underline;
+}
+#nav li a i{
+  padding: 10px;
+}
+#navlogo{
+  font-size: 30px;
+
+}
+/*    DROPDOWN MENUES   */
+ul.sub-menu{
+  display: none;
+  background-color: white;
+  width: 100vw;
+  height: 200%;
+  position: absolute;
+  top: 70%;
+  left: -39%;
+  border-top: 0.5px solid darkgrey;
+  z-index: 5;
+}
+#list{
+  padding: 30px;
+}
+.navClass li:hover .sub-menu{
+  display: block;
+}
+
+/*    currency    */
+#currency h6{
+  font-size: 14px;
+  margin-top: 10%;
+}
+#currency h6:hover{
+  cursor: pointer;
+  color: darkgrey;
+}
+#flags{
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+#flags li{
+  padding: 3px;
+}
+#flags li img{
+  width: 23px;
+  height: 15px;
+}
+#currency:hover #flags{
+  display: block;
+}
+/*    Cart  */
+#cart span{
+  font-size: 14px;
+}
+#cart-img:hover{
+  cursor: pointer;
+  font-size: 18px;
+}
+/*    cart-window  */
+#cart-window{
+  display: none;
+  background-color: #f9fafc;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #c6cad1;
+  -moz-animation: slide 1s ease 0s ;
+  -webkit-animation: slide 1s ease 0s forwards;
+  -o-animation: slide 1s ease 0s forwards;
+  -ms-animation: slide 1s ease 0s forwards;
+  animation: slide .5s ease 0s forwards;
+}
+​
+@-moz-keyframes slide /* Firefox */
+{
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+@-webkit-keyframes slide /* Safari and Chrome */
+{
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+@-ms-keyframes slide /* IE10 */
+{
+  from {width: 0;}
+  to {width: 100%;}
+}
+@keyframes slide {
+  from {width: 0;}
+  to {width: 100%;}
+}
+#cart-window p{
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: grey;
+}
+#windowHeader{
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+#cart-window h2{
+  float: left;
+  font-size: 30px;
+
+}
+#closebtn{
+  float: right;
+  font-size: 13px;
+  color: grey;
+  text-decoration: none;
+}
+#closebtn:hover{
+  color: black;
+}
+#items{
+  background-color: #e5e6e8;
+}
+#total{
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#total label{
+  padding-right: 120px;
+
+}
+#buybtn{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: black;
+  border: none;
+  color: grey;
+}
+#buybtn:hover{
+  background-color: grey;
+  color: black;
+}
+
+/*    SLIDER    */
+#slider{
+  margin: 0;
+  padding: 0;
+}
+.blueberry{
+  margin: 0;
+  padding: 0;
+}
+.slides li img{
+  margin: 0;
+  padding: 0;
+
+}
+
+/*    PAIRING     */
+#pairing {
+  background-color: #f5f4f0;
+  padding: 50px;
+}
+#pairing h5{
+  padding-top: 50px;
+  padding-bottom: 130px;
+  font-weight: bolder;
+}
+#pairing-footer{
+  margin-top: 100px;
+  padding-bottom: 50px;
+
+}
+#pairing-footer p{
+  font-size: 13px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+#pairing button{
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  font-size: 13px;
+  padding: 5px;
+  color: grey;
+
+}
+#pairing button:hover{
+  border: 1px solid grey;
+  font-size: 13px;
+  padding: 5px;
+  color: black;
+}
+/*    BOTTLES   */
+/*#bottles-container{
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#bottles-container h6{
+  font-weight: bold;
+}
+
+#bootles{
+  padding: 200px;
+}
+#bootles img{
+  width: 100px;
+  height: 250px;
+  margin: 10% 10%;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#i1, #i2, #i3, #i4{
+  display: none;
+}
+.pre, .nxt{
+  width: 1%;
+  height: 3%;
+  position: absolute;
+  top: 50%;
+  background: rgba(88,88,88, 0.4);
+  z-index: 99;
+  cursor: pointer;
+}
+.pre{
+  left: 0;
+}
+.nxt{
+  right: 0;
+}
+.nav{
+  width: 10%;
+  height: 11px;
+  bottom: 3%;
+  position: absolute;
+  left: 47%;
+  text-align: center;
+}
+.dots{
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+}
+#i1:checked ~ #slide-1{
+  z-index: 9;
+}
+#i2:checked ~ #slide-2{
+  z-index: 9;
+}
+#i3:checked ~ #slide-3{
+  z-index: 9;
+}
+#i4:checked ~ #slide-4{
+  z-index: 9;
+}
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4{
+  background: #fff;
+}*/
+/*    footer    */
+#footer-top{
+  padding-top: 50px;
+}
+#hashtag a{
+  text-decoration: none;
+  color: black;
+}
+#footer-logo{
+  text-align: center;
+}
+#social{
+  list-style-type: none;
+  text-align: right;
+}
+#social li{
+  display: inline;
+  padding: 3px;
+}
+#social li a{
+  text-decoration: none;
+  color: black;
+}
+
+#copy{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 10px;
+  opacity: 0.5;
+}
+#pay-mode{
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+}
+#pay-mode li{
+  display: inline;
+  padding: 7px;
+  font-size: 30px;
+  opacity: 0.4;
+}
+
+
+/*    GRAPES HTML    */
+#wall-image{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(/wineList/static/wineList/img/cabernet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+#wall-image p{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+}

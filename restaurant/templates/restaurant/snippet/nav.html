@@ -1,0 +1,16 @@
+<header>
+  <a href="#" id="title">Frères Heureux</a>
+  <nav id="menu">
+    <a href="#" class="hide-desktop">
+      <i class="fa fa-bars menu" id="mobilMenu" alt="toggle menu" aria-hidden="true"></i>
+    </a>
+    <ul class="show-desktop hide-mobile"  id="nav">
+      <li id="exit" class="hide-desktop exit-btn"><i class="fa fa-times" alt="exit menu" aria-hidden="true"></i></li>
+      <li><a href="#chef">About Us</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#space">Venues</a></li>
+      <li><a href="reservations">Reservations</a></li>
+      <li><a href="{% url 'wineList:home'%}">Wine Store</a></li>
+    </ul>
+  </nav>
+ </header>

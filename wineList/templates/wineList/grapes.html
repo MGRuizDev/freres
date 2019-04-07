@@ -1,0 +1,10 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+{% static "" as baseUrl %}
+<div class="container" id="grapes">
+  <p>{{ definition }}</p>
+  <div id="image"><img src="{{ baseUrl }}wineList/img/{{ image }}" alt=""></div>
+</div>
+{% endblock %}

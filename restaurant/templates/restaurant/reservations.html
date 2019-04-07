@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frères Heureux | Special Events</title>
+    <link rel="stylesheet" href='{% static "restaurant/css/bootstrap.min.css" %}' type="text/css" >
+    <link rel="stylesheet" href='{% static "restaurant/css/style.css" %}' />
+  </head>
+  <body>
+    <div id="form-container">
+      <a href="{% url 'restaurant:home' %}" id="title-form">Frères Heureux</a>
+        <div class="rounded border-0" id="reservation_form">
+          <form method="POST" action="">
+            {% csrf_token %}
+            <div>
+              <h1>Guest Information</h1>
+              {{ guest_form|crispy }}
+            </div>
+            <div>
+              <h1>Booking Information</h1>
+              {{ booking_form.as_p }}
+            </div>
+            <div>
+              <h1>Payment Information</h1>
+              {{ payment_form|crispy }}
+            </div>
+            <input class="btn btn-outline-dark align-center" type="submit" value="RESERVE"></input>
+          </form>
+        </div>
+    </div>
+    {% include 'restaurant/snippet/footer.html' %}
+  </body>
+</html>

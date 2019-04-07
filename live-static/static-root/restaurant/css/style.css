@@ -1,0 +1,192 @@
+*{
+}
+
+body{
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #ffffe6;
+  color: #484949;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*------Global Elements-------*/
+img{
+  max-width: 100%;
+}
+p{
+  font-size: 14pt;
+}
+h2{
+  font-weight: bolder;
+}
+.bars{
+  background-color: #ffffe6;
+  width: 100%;
+
+}
+.side-text{
+  padding: 0px;
+}
+
+/*-----Home Section------*/
+#biga {
+background-image: url('/static/restaurant/img/bigaX.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 400px;
+width: auto;
+height:400px;
+}
+
+/*-----header & Nav-----*/
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 4%;
+}
+#title{
+  font-size: 16pt;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+header i{
+  color: white;
+}
+#menu ul{
+  list-style-type: none;
+  background-color: rgba(192, 192, 192, 0.1);
+  display: none;
+  padding-left: 0;
+}
+.#menu .exit-btn{
+  align-content: flex-end;
+}
+#menu ul li{
+  margin-right: 50px;
+}
+#menu ul li a{
+  text-decoration: none;
+  color: #B8B8B8;
+}
+#menu ul li a:hover{
+  color: white;
+}
+#welcome img{
+  width: 50%;
+  margin: 6em auto 6em 25%;
+}
+
+
+
+#chef {
+  padding: 4%;
+}
+
+#kitchen{
+  background-image: url("/static/restaurant/img/kitchenX.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 600px;
+  width: auto;
+  height:600px;
+}
+
+#food{
+  padding: 4%;
+}
+
+#service {
+background-image: url("/static/restaurant/img/serviceX.jpeg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 600px;
+width: auto;
+height:600px;
+}
+
+
+
+#space{
+  padding: 4%;
+  display: flex;
+}
+.rooms {
+  padding-bottom: 15%;
+}
+.rooms h5{
+  margin: 0;
+}
+
+#modal{
+  display: none;
+  /*background-image: url("/static/restaurant/img/espada.jpg");*/
+  background-repeat: no-repeat;
+  background-size: 300px 200px;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  content: normal; /*Div fixed without content dissapear, therefore this is need it*/
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.rooms #alamo:hover {
+  cursor: pointer;
+}
+.rooms #capis:hover {
+  cursor: pointer;
+}
+.rooms #jose:hover {
+  cursor: pointer;
+}
+.rooms #espada:hover {
+  cursor: pointer;
+}
+.rooms #terrace:hover {
+  cursor: pointer;
+}
+
+
+
+footer{
+  padding: 4%;
+}
+
+#follow ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+#follow ul li{
+  display: inline;
+  padding: ;
+}
+#follow ul li i{
+  font-size: 25px;
+  color: #B8B8B8;
+}
+#follow ul li i:hover{
+  color: black;
+}
+
+
+
+#reservation_form{
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+#reservation_form form{
+  margin: 40px;
+}
+#reservation_form h1{
+  text-align: center;
+  padding: 20px;
+}

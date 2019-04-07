@@ -1,0 +1,138 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wine Wizard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='{% static "wineList/css/bootstrap.min.css" %}'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href='{% static "wineList/css/carousel.css" %}'/>
+    <link rel="stylesheet" href='{% static "wineList/css/blueberry.css" %}'/>
+    <link rel="stylesheet" href='{% static "wineList/css/style.css" %}'/>
+    {% block jquery %}
+
+    {% endblock %}
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+
+        <a href="{% url 'wineList:home' %}" id="logo">Freres Wine</a>
+
+        <nav>
+          <ul class="navClass" id="nav">
+            <li><a href="#">Grapes</a>
+                <ul class="sub-menu" id="list">
+                  <li><a href="{% url 'wineList:grapes' slug='cabernet' %}">Cabernet</a></li>
+                  <li><a href="{% url 'wineList:grapes' slug='merlot' %}">Merlot</a></li>
+                  <li><a href="{% url 'wineList:grapes' slug='pinotNoir' %}">Pinot Noir</a></li>
+                  <li><a href="{% url 'wineList:grapes' slug='sauvignon' %}">Sauvignon Blanc</a></li>
+                  <li><a href="{% url 'wineList:grapes' slug='chardonay' %}">Chardonay</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'wineList:store' %}">Store</a></li>
+            <li><a href="{% url 'wineList:about' %}">About Us</a></li>
+            <li><a href="{% url 'wineList:contact' %}">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="currency">
+          <h6>Sign in</h6>
+          <!--<ul id="flags">
+            <li><img src='{% static "wineList/img/usa.png" %}'></img></li>
+            <li><img src='{% static "wineList/img/uk.png" %}'></img></li>
+            <li><img src='{% static "wineList/img/mexico.png" %}'></img></li>
+            <li><img src='{% static "wineList/img/japan.png" %}'></img></li>
+            <li><img src='{% static "wineList/img/canada.png" %}'></img></li>
+          </ul>-->
+        </div>
+
+        <div id="cart">
+          <i class="fa fa-shopping-cart" id="cart-img"></i>
+          <span class="mini-cart-label">Cart</span>
+          <span class="mini-cart-count">0</span>
+        </div>
+
+        <div class="col-lg-4" id="cart-window">
+          <div  class="container-fluid">
+            <div  id="windowHeader">
+              <div>
+                <h2>Cart</h2>
+              </div>
+              <div>
+                <a href="#" id="closebtn">CLOSE</a>
+              </div>
+            </div>
+            <div>
+              <p id="items">Your Cart is empty <span>Continue shopping</span></p>
+            </div>
+            <div id="total">
+              <label>TOTAL</label>
+              <input></input>
+            </div>
+            <div>
+              <p>This order price does not include shipping. The shipping cost will be calculated in the next step</p>
+            </div>
+            <div>
+              <button id="buybtn">BUY NOW</button>
+            </div>
+          </div>
+        </div>
+
+      </header>
+    </div>
+
+    {% block content %}
+
+
+    {% endblock %}
+
+    <!--  <footer></footer>     -->
+    <footer class="container">
+          <div class="row" id="footer-top">
+            <div class=" col-lg-3" id="hashtag"><a href="#">#winesomalier</a></div>
+            <div class=" col-lg-6" id="footer-logo"><i class="fa fa-gg" id="navlogo"></i></div>
+            <div class=" col-lg-3">
+              <ul id="social">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12" id="copy">
+              <p> &copy all rights reserved MGR 2018.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <ul id="pay-mode">
+                <li><i class="fa fa-cc-visa"></i></li>
+                <li><i class="fa fa-cc-mastercard"></i></li>
+                <li><i class="fa fa-cc-amex"></i></li>
+                <li><i class="fa fa-cc-paypal"></i></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    <!-- Latest compiled JavaScript
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!-- Cart Window -->
+    <script src='{% static "wineList/javascript/bootstrap.min.js" %}'></script>
+    <!--<script src="static/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src='{% static "wineList/javascript/cartWindow.js" %}'></script>
+  </body>
+</html>

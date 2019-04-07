@@ -1,0 +1,21 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container" id="list-wine">
+    <h1 align="center">Chose from our {{ type }} wine collection.<h1>
+    {% for w in wine %}
+      <div id="wine-section">
+        <div id="wine-title">
+          <h4>{{w.designation}} {{w.variety}} {{w.winery}}</h4>
+          <p class="sub-text">Country: {{w.country}}      Points: {{w.points}}</p>
+        </div>
+        <div id="price">
+          <p class="sub-text">${{w.price}} dollars</p>
+        </div>
+        <p id="description">{{w.description}}</p>
+        <p class="sub-text">Location: {{w.province}}, {{w.region}}, {{w.subregion}}.</p>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}

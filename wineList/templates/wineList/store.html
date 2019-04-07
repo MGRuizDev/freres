@@ -1,0 +1,180 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+{% block jquery %}
+{% include 'wineList/snippet/carouselJquery.html' %}
+{% endblock %}
+
+    {% block content %}
+
+    <div class="container" id="store">
+        <div id="navWineList">
+          <p>The Wine store has {{ list_count }}, bottles in excistance.</p>
+          <ul id="mainList">
+              <li><a href="#"><span id="red">Red</span> Wines. ({{ red_count }})</a></li>
+                <ul class="sub-list">
+                  <li>Agiorgitiko</li>
+                  <li>Aglianico</li>
+                  <li>Alicante Bouschet</li>
+                  <li>Alvarinho</li>
+                  <li>Aragonês</li>
+                  <li>Baga</li>
+                  <li>Barbera</li>
+                  <li>Blauburgunder</li>
+                  <li>Blaufränkisch</li>
+                  <li>Bordeaux-style Red Blend</li>
+                  <li>Cabernet Franc</li>
+                  <li>Cabernet Sauvignon</li>
+                  <li>Carignane</li>
+                  <li>Charbono</li>
+                  <li>Frappato</li>
+                  <li>Früburgunder</li>
+                  <li>G-S-M</li>
+                  <li>Gamay</li>
+                  <li>Grenache</li>
+                  <li>Grenache-Syrah</li>
+                  <li>Kekfrankos</li>
+                  <li>Lemberger</li>
+                  <li>Malbec</li>
+                  <li>Malbec-Merlot</li>
+                  <li>Mavrud</li>
+                  <li>Mencía</li>
+                  <li>Meritage</li>
+                  <li>Merlot</li>
+                  <li>Merlot-Malbec</li>
+                  <li>Monastrell</li>
+                  <li>Mourvèdre</li>
+                  <li>Nebbiolo</li>
+                  <li>Negrette</li>
+                  <li>Nero d'Avola</li>
+                  <li>Petit Verdot</li>
+                  <li>Petite Sirah</li>
+                  <li>Pinot Noir</li>
+                  <li>Pinot Noir-Gamay</li>
+                  <li>Portuguese Red</li>
+                  <li>Primitivo</li>
+                  <li>Provence red blend</li>
+                  <li>Red Blend</li>
+                  <li>Rhône-style Red Blend</li>
+                  <li>Sangiovese</li>
+                  <li>Syrah</li>
+                  <li>Syrah-Grenache</li>
+                  <li>Tannat</li>
+                  <li>Tannat-Cabernet</li>
+                  <li>Tempranillo</li>
+                  <li>Tempranillo Blend</li>
+                  <li>Tinta de Toro</li>
+                  <li>Touriga Nacional</li>
+                  <li>Zinfandel</li>
+                </ul>
+              <li><a href="#"><span id="white">White</span> Wines. ({{ white_count }})</a></li>
+                <ul class="sub-list">
+                  <li>Alsace white blend</li>
+                  <li>Assyrtiko</li>
+                  <li>Bordeaux-style White Blend</li>
+                  <li>Chardonnay</li>
+                  <li>Chasselas</li>
+                  <li>Chenin Blanc-Chardonnay</li>
+                  <li>Friulano</li>
+                  <li>Furmint</li>
+                  <li>Garganega</li>
+                  <li>Glera</li>
+                  <li>Godello</li>
+                  <li>Greco</li>
+                  <li>Gros Manseng</li>
+                  <li>Grüner Veltliner</li>
+                  <li>Malagouzia</li>
+                  <li>Malvasia Bianca</li>
+                  <li>Moscato</li>
+                  <li>Muscat</li>
+                  <li>Palomino</li>
+                  <li>Picpoul</li>
+                  <li>Pinot Bianco</li>
+                  <li>Pinot Blanc</li>
+                  <li>Pinot Grigio</li>
+                  <li>Pinot Gris</li>
+                  <li>Portuguese White</li>
+                  <li>Prié Blanc</li>
+                  <li>Rhône-style White Blend</li>
+                  <li>Ribolla Gialla</li>
+                  <li>Riesling</li>
+                  <li>Sauvignon</li>
+                  <li>Sauvignon Blanc</li>
+                  <li>Scheurebe</li>
+                  <li>Semillon-Sauvignon Blanc</li>
+                  <li>Silvaner</li>
+                  <li>Torrontés</li>
+                  <li>Ugni Blanc</li>
+                  <li>Ugni Blanc-Colombard</li>
+                  <li>Vermentino</li>
+                  <li>Viognier</li>
+                  <li>White Blend</li>
+                </ul>
+                <li><a href="#"><span id="rose">Rose</span> Wines. ({{ rose_count }})</a></li>
+                  <ul class="sub-list">
+                    <li>Gewürztraminer</li>
+                    <li>Portuguese Rosé</li>
+                    <li>Rosé</li>
+                  </ul>
+                <li><a href="#"><span id="sparkling">Sparkling</span> Wines. ({{ sparkling_count }})</a></li>
+                    <ul class="sub-list">
+                      <li>Sparkling Blend</li>
+                    </ul>
+                <li><a href="#"><span id="fortified">Fortified</span> Wines. ({{ fortified_count }})</a></li>
+                    <ul class="sub-list">
+                      <li>Sherry</li>
+                    </ul>
+          </ul>
+        </div>
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption text-left">
+                  <h1>Example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption text-right">
+                  <h1>One more for good measure.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+    {% endblock %}

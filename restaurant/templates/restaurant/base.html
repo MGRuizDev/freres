@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frères Heureux</title>
+    {% include 'restaurant/snippet/css.html' %}
+  </head>
+  <body>
+      <div id="biga">
+        {% include 'restaurant/snippet/nav.html' %}
+      <div id="welcome"><img src='{% static "restaurant/img/welcome.png" %}'></div>
+      </div>
+
+      {% block content %}
+
+      {% endblock %}
+
+      {% include 'restaurant/snippet/footer.html' %}
+      <script src='{% static "restaurant/javascript/rooms.js" %}'></script>
+      <script>
+        var mobilMenu = document.getElementById('mobilMenu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        mobilMenu.addEventListener('click', function(e){
+          nav.classList.toggle('hide-mobile'); /*Attach and deattach the hede-mobile class from css rules*/
+          e.preventDefault();
+        });
+        exit.addEventListener('click', function(e){
+          nav.classList.add('hide-mobile');
+          e.preventDefault();
+        });
+      </script>
+  </body>
+</html>
