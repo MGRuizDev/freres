@@ -11,7 +11,7 @@
         <div id="navWineList">
           <p>The Wine store has {{ list_count }}, bottles in excistance.</p>
           <ul id="mainList">
-              <li><a href="#"><span id="red">Red</span> Wines. ({{ red_count }})</a></li>
+              <li><a href="{% url 'wineList:listWine' slug='red' %}"><span id="red">Red</span> Wines. ({{ red_count }})</a></li>
                 <ul class="sub-list">
                   <li>Agiorgitiko</li>
                   <li>Aglianico</li>
@@ -67,7 +67,7 @@
                   <li>Touriga Nacional</li>
                   <li>Zinfandel</li>
                 </ul>
-              <li><a href="#"><span id="white">White</span> Wines. ({{ white_count }})</a></li>
+              <li><a href="{% url 'wineList:listWine' slug='white' %}"><span id="white">White</span> Wines. ({{ white_count }})</a></li>
                 <ul class="sub-list">
                   <li>Alsace white blend</li>
                   <li>Assyrtiko</li>
@@ -110,17 +110,17 @@
                   <li>Viognier</li>
                   <li>White Blend</li>
                 </ul>
-                <li><a href="#"><span id="rose">Rose</span> Wines. ({{ rose_count }})</a></li>
+                <li><a href="{% url 'wineList:listWine' slug='rose' %}"><span id="rose">Rose</span> Wines. ({{ rose_count }})</a></li>
                   <ul class="sub-list">
                     <li>Gewürztraminer</li>
                     <li>Portuguese Rosé</li>
                     <li>Rosé</li>
                   </ul>
-                <li><a href="#"><span id="sparkling">Sparkling</span> Wines. ({{ sparkling_count }})</a></li>
+                <li><a href="{% url 'wineList:listWine' slug='sparkling' %}"><span id="sparkling">Sparkling</span> Wines. ({{ sparkling_count }})</a></li>
                     <ul class="sub-list">
                       <li>Sparkling Blend</li>
                     </ul>
-                <li><a href="#"><span id="fortified">Fortified</span> Wines. ({{ fortified_count }})</a></li>
+                <li><a href="{% url 'wineList:listWine' slug='fortified' %}"><span id="fortified">Fortified</span> Wines. ({{ fortified_count }})</a></li>
                     <ul class="sub-list">
                       <li>Sherry</li>
                     </ul>

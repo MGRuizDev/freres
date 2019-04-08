@@ -15,6 +15,7 @@
         </div>
         <p id="description">{{w.description}}</p>
         <p class="sub-text">Location: {{w.province}}, {{w.region}}, {{w.subregion}}.</p>
+        <a href="{% url 'cart:update_cart' id=w.id %}" id="updateCartBtn">Add to Cart</a>
       </div>
     {% endfor %}
 </div>

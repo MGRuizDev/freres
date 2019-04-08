@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('restaurant.urls', namespace='restaurant')),
     path('wine/', include('wineList.urls', namespace='wineList')),
+    path('cart/', include('cart.urls', namespace='cart')),
 ]
 
 if settings.DEBUG:
