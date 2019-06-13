@@ -30,59 +30,97 @@
       </div>
     </div>
     <div class="container">
-      <form class="row">
+      <form class="row" method="POST" action="{% url 'wineList:pairing' %}">
+        {% csrf_token %}
             <div class="col-lg-2">
               <label>Cheese/nuts</label>
-              <select id="cheesNuts" class="form-control">
-                <option value="Low">feta</option>
-                <option value="Medium">goat cheese</option>
-                <option value="High">pine nuts</option>
+              <select id="cheesNuts" name="1" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="feta">feta</option>
+                <option value="pine-nuts">pine nuts</option>
+                <option value="asagio">asagio</option>
+                <option value="almonds">almonds</option>
+                <option value="guoda">guoda</option>
+                <option value="peanuts">peanuts</option>
+                <option value="brie">brie</option>
+                <option value="walnuts">walnuts</option>
+                <option value="roquefort">roquefort</option>
+                <option value="hazelnuts">hazelnuts</option>
+                <option value="parmesan">parmesan</option>
+                <option value="cheddar">cheddar</option>
                </select>
             </div>
             <div class="col-lg-2">
               <label>Meat/poultry</label>
-              <select id="meatPoultry" class="form-control">
-                <option value="Low">chicken</option>
-                <option value="Medium">turkey</option>
-                <option value="High">pork</option>
+              <select id="meatPoultry" name="2" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="chicken">chicken</option>
+                <option value="turkey">turkey</option>
+                <option value="pork">pork</option>
+                <option value="veal">veal</option>
+                <option value="duck">duck</option>
+                <option value="sausage">sausage</option>
+                <option value="lamb">lamb</option>
+                <option value="pepperoni">pepperoni</option>
+                <option value="beef">beef</option>
+                <option value="venison">venison</option>
               </select>
             </div>
             <div class="col-lg-2">
               <label>Seafood</label>
-              <select id="seafood" class="form-control">
-                <option value="Low">fatty white fish</option>
-                <option value="Medium">oysters</option>
-                <option value="High"> scallops</option>
-                <option value="Low">lobster</option>
-                <option value="Medium">shrimp</option>
-                <option value="High">sushi</option>
+              <select id="seafood" name="3" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="oysters">oysters</option>
+                <option value="scallops">scallops</option>
+                <option value="lobster">lobster</option>
+                <option value="shrimp">shrimp</option>
+                <option value="halibut">halibut</option>
+                <option value="crab">crab</option>
+                <option value="sea-bass">sea bass</option>
+                <option value="trout">trout</option>
+                <option value="tuna">tuna</option>
+                <option value="salmon">salmon</option>
+                <option value="grilled-meatier-fish">grilled meatier fish</option>
               </select>
             </div>
             <div class="col-lg-2">
-              <label>Fruits/Veggies</label>
-              <select id="fruitsVeggies" class="form-control">
-                <option value="Low">citrus</option>
-                <option value="Medium">green apple</option>
-                <option value="High">asparagus</option>
+              <label>Veggies</label>
+              <select id="fruitsVeggies" name="4" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="asparagus">asparagus</option>
+                <option value="potato">potato</option>
+                <option value="squash">squash</option>
+                <option value="chili-peppers">chili peppers</option>
+                <option value="mushrooms">mushrooms</option>
+                <option value="beets">beets</option>
+                <option value="tomatoes">tomatoes</option>
+                <option value="broccoli">broccoli</option>
+
               </select>
             </div>
             <div class="col-lg-2">
-              <label>Herbs/Spices/sauces</label>
-              <select id="herbsSpicesSauces" class="form-control">
-                <option value="Low">chives</option>
-                <option value="Medium">cilantro</option>
-                <option value="High">tarragon</option>
-                <option value="Medium">citrus</option>
-                <option value="High">light cream sauces</option>
+              <label>Fruits</label>
+              <select id="herbsSpicesSauces" name="5" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="green-apple">green apple</option>
+                <option value="mango">mango</option>
+                <option value="pear">pear</option>
+                <option value="strawberries">strawberries</option>
+                <option value="plums">plums</option>
+                <option value="cherries">cherries</option>
               </select>
             </div>
             <div class="col-lg-2">
               <label>Deserts</label>
-              <select id="Deserts" class="form-control">
-                <option value="Low">sorbet</option>
-                <option value="Medium">key lime pie</option>
-                <option value="High">meringue</option>
-                <option value="High">mango</option>
+              <select id="Deserts" name="6" class="form-control">
+                <option selected disabled hidden>Choose here</option>
+                <option value="key-lime-pie">key lime pie</option>
+                <option value="vanilla-pudding">vanilla pudding</option>
+                <option value="apple-pie">apple pie</option>
+                <option value="creme-brulee">creme brulee</option>
+                <option value="coffe-based-desserts">coffe-based desserts</option>
+                <option value="fondue">fondue</option>
+                <option value="dark-chocolate">dark chocolate</option>
               </select>
             </div>
             <div class="container row" id="pairing-footer">

@@ -365,6 +365,22 @@ ul.sub-menu{
   font-size: 40pt;
 }
 
+/*----sing up form-----------*/
+#register{
+  background-color: #f5f4f0;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 0.5px solid grey;
+}
+#register div{
+  flex-basis: 100%;
+  font-size: 12pt;
+  margin:auto 100px 100px 100px;
+}
 
 /*-------------STORE------------------*/
 #store{

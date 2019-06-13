@@ -1,0 +1,25 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container" id="list-wine">
+    <h1 align="center">Pairing Results.</h1>
+    <h5 align="center">{% for r in list %} -{{ r }} {% endfor %}</h5>
+    {% for obj in result %}
+      {% for w in obj %}
+      <div id="wine-section">
+        <div id="wine-title">
+          <h4>{{w.designation}} {{w.variety}} {{w.winery}}</h4>
+          <p class="sub-text">Country: {{w.country}}      Points: {{w.points}}</p>
+        </div>
+        <div id="price">
+          <p class="sub-text">${{w.price}} dollars</p>
+        </div>
+        <p id="description">{{w.description}}</p>
+        <p class="sub-text">Location: {{w.province}}, {{w.region}}, {{w.subregion}}.</p>
+        <a href="{% url 'cart:update_cart' id=w.id %}" id="updateCartBtn">Add to Cart</a>
+      </div>
+      {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

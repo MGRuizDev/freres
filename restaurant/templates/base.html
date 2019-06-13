@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frères Heureux | Special Events</title>
+    {% include 'snippet/css.html' %}
+  </head>
+  <body>
+      <div class="row" id="biga">
+        {% include 'snippet/nav.html' %}
+      <!-- Header Finish  -->
+      </div>
+
+
+      {% block content %}
+
+      {% endblock %}
+
+      {% include 'snippet/footer.html' %}
+      <script src='{% static "javascript/rooms.js" %}'></script>
+  </body>
+</html>

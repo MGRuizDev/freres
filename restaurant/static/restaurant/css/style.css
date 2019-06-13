@@ -259,12 +259,12 @@ footer p{
   padding: 10px;
 }
 
-/*------------Query-------------*/
+/*------------Media Query-------------*/
 
 @media only screen and (min-width: 480px) {
 
  #reservation_form{
-  margin: 5% 8%;
+  margin: 2% 4%;
   padding: 30px;
 }
 }
@@ -276,9 +276,9 @@ footer p{
   height:500px;
   }
   #welcome img{
-    width: 150pt;
+    width: 160pt;
     max-width: none;
-    margin: 3em auto 3em 35%;
+    margin: 4em auto 4em 38%;
   }
   #modal{
     background-size: 500px 300px;
@@ -329,7 +329,7 @@ footer p{
     left: 0;
   }
   #welcome img{
-    width: 180pt;
+    width: 190pt;
     max-width: none;
     margin: 6em auto 6em 40%;
   }
@@ -399,5 +399,82 @@ footer p{
   }
   #modal{
     background-size: 850px 550px;
+  }
+  #biga {
+    background-size: 100% 650px;
+    width: auto;
+    height:650px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+
+  #biga {
+    background-size: 100% 780px;
+    width: auto;
+    height:780px;
+  }
+  #welcome img{
+    width: 300pt;
+    max-width: none;
+    margin: 12em auto 12em 40%;
+  }
+  #kitchen{
+    background-size: 100% 780px;
+    width: auto;
+    height:780px;
+  }
+  #service {
+  background-size: 100% 780px;
+  width: auto;
+  height:780px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+
+  #biga {
+    background-size: 100% 880px;
+    width: auto;
+    height:880px;
+  }
+  #welcome img{
+    width: 350pt;
+    max-width: none;
+    margin: 12em auto 12em 40%;
+  }
+  #kitchen{
+    background-size: 100% 880px;
+    width: auto;
+    height:880px;
+  }
+  #service {
+  background-size: 100% 880px;
+  width: auto;
+  height:880px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+
+  #biga {
+    background-size: 100% 980px;
+    width: auto;
+    height:980px;
+  }
+  #welcome img{
+    width: 350pt;
+    max-width: none;
+    margin: 12em auto 12em 40%;
+  }
+  #kitchen{
+    background-size: 100% 980px;
+    width: auto;
+    height:980px;
+  }
+  #service {
+  background-size: 100% 980px;
+  width: auto;
+  height:980px;
   }
 }

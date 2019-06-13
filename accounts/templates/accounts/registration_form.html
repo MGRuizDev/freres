@@ -1,0 +1,14 @@
+{% extends "wineList/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <div class="container" id="register">
+    <div>
+      <h2>Please Register here.</h2>
+      <form action="" method="post"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit"></input>
+      </form>
+    </div>
+  </div>
+{% endblock %}

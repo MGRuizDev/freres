@@ -43,7 +43,12 @@
         </nav>
 
         <div id="currency">
-          <h6>Sign in</h6>
+          {% if user.is_authenticated %}
+            <a href="{% url 'accounts:logout' %}"><h6>logout</h6></a>
+          {% else %}
+            <a href="{% url 'accounts:register' %}">Sign up</a> |
+            <a href="{% url 'accounts:login' %}">login</a>
+          {% endif %}
           <!--<ul id="flags">
             <li><img src='{% static "wineList/img/usa.png" %}'></img></li>
             <li><img src='{% static "wineList/img/uk.png" %}'></img></li>

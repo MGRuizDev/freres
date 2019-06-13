@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="bars">
+    <div class="row container" id="chef">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"id="auden"></div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <p id="whoIsChef">Robert Bruce, a native North Londoner, is well known for his adventuresome, original and creative menus. Recognized early in his career as one to watch among the new rising stars of regional cuisine, Auden brought a worldly fusion of influences to his brand of nouvelle American cuisine. One reviewer declared Roberts’s dishes “extraordinary creations that play havoc with tradition.” His pitch-perfect style brings a lighthearted touch to serious gastronomy, earning his restaurants a loyal fan base of foodies and non-foodies alike for over twenty-five years.</p>
+      </div>
+    </div>
+</div>
+
+<div class="row" id="kitchen">
+</div>
+
+<div class="bars">
+    <div class="row container" id="food">
+      <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12" id="imgFood">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12"><img src='{% static "img/Desserts.jpg" %}'></div>
+          <div class="col-lg-6 col-md-6 col-sm-12"><img src='{% static "img/lamb.jpg" %}'></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12"><img src='{% static "img/pork.jpg" %}'></div>
+          <div class="col-lg-6 col-md-6 col-sm-12"><img src='{% static "img/shrimp.jpg" %}'></div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+        <p id="whoIsChef">Robert Bruce, a native North Londoner, is well known for his adventuresome, original and creative menus. Recognized early in his career as one to watch among the new rising stars of regional cuisine, Auden brought a worldly fusion of influences to his brand of nouvelle American cuisine. One reviewer declared Robert’s dishes “extraordinary creations that play havoc with tradition.” His pitch-perfect style brings a lighthearted touch to serious gastronomy, earning his restaurants a loyal fan base of foodies and non-foodies alike for over twenty-five years.</p>
+      </div>
+    </div>
+</div>
+
+<div class="row" id="service">
+</div>
+
+<div class="bars">
+  <div class="container">
+    <div class="container row" id="style">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 rooms">
+        <h3 id="alamo">Alamo</h3>
+        <h5>740 SF</h5>
+        <p>Typical seating arrangement 5 tables of 10. Combines with the next room for larger parties. Views to the amaizing jardins walk, access to semi private jardens terraze.</p>
+        <h5>Classroom - 50</h5>
+        <h5>Dinning - 50</h5>
+        <h5>Reception - 80</h5>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 rooms">
+        <h3 id="capis">Capistrano</h3>
+        <h5>295 SF</h5>
+        <p>Typical seating arrangement 5 tables of 10. Combines with the next room for larger parties. Views to the amaizing jardins walk, access to semi private jardens terraze.</p>
+        <h5>Classroom - 20</h5>
+        <h5>Dinning - 20</h5>
+        <h5>Imperial Table - 20</h5>
+        <h5>Reception - 30</h5>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 rooms">
+        <h3 id="jose">San Jose</h3>
+        <h5>765 SF</h5>
+        <p>Typical seating arrangement 5 tables of 10. Combines with the next room for larger parties. Views to the amaizing jardins walk, access to semi private jardens terraze.</p>
+        <h5>Classroom - 60</h5>
+        <h5>Dinning - 60</h5>
+        <h5>Reception - 90</h5>
+      </div>
+      <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 rooms">
+        <h3 id="espada">Espada</h3>
+        <h5>300 SF</h5>
+        <p>Typical seating arrangement 5 tables of 10. Combines with the next room for larger parties. Views to the amaizing jardins walk, access to semi private jardens terraze.</p>
+        <h5>Classroom - 15</h5>
+        <h5>Dinning - 15</h5>
+        <h5>Reception - 0</h5>
+      </div>
+      <div class="col-xl-2 col-lg-4 col-md-8 col-sm-8 rooms">
+        <h3 id="terrace">Terrace</h3>
+        <h5>1300 SF</h5>
+        <p>Typical seating arrangement 5 tables of 10. Combines with the next room for larger parties. Views to the amaizing jardins walk, access to semi private jardens terraze.</p>
+        <h5>Classroom - 400</h5>
+        <h5>Dinning - 230</h5>
+        <h5>Reception - 400</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" id="modal"></div>
+    </div>
+  </div>
+</div>
+  <hr size="2px" color="black">
+{% endblock %}

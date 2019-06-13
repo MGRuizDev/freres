@@ -81,3 +81,33 @@ def listWine(request, slug):
     elif slug == 'fortified':
         context={'wine': fortified, 'type': slug}
     return render(request, 'wineList/listWine.html', context,)
+
+
+def pairing(request):
+    choicesList = []
+    recommendedList = []
+    result = []
+    SauvignonB = ['feta', 'pine-nuts', 'chicken', 'turkey', 'pork', 'oysters', 'scallops', 'lobster', 'shrimp', 'asparagus', 'green-apple', 'key-lime-pie', 'Sauvignon Blanc']
+    Chardonnay = ['asagio', 'almonds', 'chicken', 'veal', 'halibut', 'crab', 'potato', 'mango', 'squash', 'vanilla-pudding', 'Chardonnay']
+    Riesling = ['guoda', 'peanuts', 'duck', 'sausage', 'sea bass', 'trout', 'chili-peppers', 'pear', 'apple-pie', 'Riesling']
+    Pinot = ['brie', 'walnuts', 'lamb', 'tuna', 'salmon', 'mushrooms', 'strawberries', 'creme-brulee', 'Pinot Noir']
+    Syrah = ['roquefort', 'hazelnuts', 'pepperoni', 'tuna', 'salmon', 'beets', 'coffe-based-desserts', 'Syrah']
+    Merlot = ['parmesan', 'beef', 'grilled-meatier-fish', 'tomatoes', 'plums', 'Merlot']
+    Cabernet = ['cheddar', 'venison', 'broccoli', 'cherries', 'dark-chocolate', 'Cabernet Sauvignon']
+    wines = [SauvignonB, Chardonnay, Riesling, Pinot, Syrah, Merlot, Cabernet]
+    test = request.POST
+    for choice in test:
+        choicesList.append(test.get(choice))
+    for c in choicesList:
+        for brand in wines:
+            if c in brand:
+                recommendedList.append(brand[-1])
+    for v in recommendedList:
+        obj = Wine.objects.filter(variety = v)
+        result.append(obj)
+        print(result)
+    context={
+        'result': result,
+        'list': recommendedList,
+    }
+    return render(request, 'wineList/pairing.html', context)

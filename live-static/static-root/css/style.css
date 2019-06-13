@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #30302f;
+}
+
+
+/*   HEADER   */
+/*#logo{
+  background-image: url("/image/logo.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  opacity: 0.5;*/
+
+}
+
+#header{
+  padding-top: 20px;
+  background-color: red;
+}
+
+#menu{
+  display: none;
+  margin-top: -40px;
+}
+#menu ul{
+  width: 160px;
+  list-style-type: none;
+  background-color: rgba(192, 192, 192, 0.1);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#menu ul li{
+  text-align: left;
+  padding: 10px;
+}
+
+#menu ul li a{
+  text-decoration: none;
+  color: #B8B8B8;
+}
+
+#menu ul li a:hover{
+  color: white;
+}
+
+#title{
+  font-size: 40px;
+  font-weight: lighter;
+  position: absolute;
+}
+#title a{
+  text-decoration: none;
+  color: white;
+}
+#title:hover #menu {
+  display: block;
+}
+
+#biga {
+background-image: url('/static/img/bigaX.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 700px;
+width: auto;
+height: 800px;
+}
+
+
+/* main section start */
+.bars{
+  padding: 20px;
+  background-color: #5e3e02;
+  color: #B8B8B8;
+  font-size: 20px;
+}
+
+#auden{
+  background-image: url("/static/img/th2.jpg");
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 400px;
+}
+
+#kitchen {
+background-image: url("/static/img/kitchenX.jpeg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 700px;
+width: auto;
+height:800px;
+}
+
+#food{
+  margin-left: 50px;
+  padding: 20px;
+  background-color: #5e3e02;
+}
+
+#chef{
+  margin-left: 50px;
+}
+
+#imgFood img{
+  width: 350px;
+  height: 250px;
+  padding: 6px;
+}
+
+#service {
+background-image: url("/static/img/serviceX.jpeg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 800px;
+width: auto;
+height:600px;
+}
+
+#style{
+  padding: 20px;
+  background-color: #5e3e02;
+}
+
+.rooms {
+  margin-left: 35px;
+}
+
+#modal{
+  display:none;
+  background-repeat: no-repeat;
+  background-size: 250px 200px;
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: 550%;
+  z-index: 10;
+}
+
+.rooms #alamo:hover {
+  cursor: pointer;
+}
+.rooms #capis:hover {
+  cursor: pointer;
+}
+.rooms #jose:hover {
+  cursor: pointer;
+}
+.rooms #espada:hover {
+  cursor: pointer;
+}
+.rooms #terrace:hover {
+  cursor: pointer;
+}
+
+#lastSec{
+  padding: 50px;
+  color: black;
+}
+
+#lastSec p{
+  font-size: 20px;
+  font-weight: bolder;
+
+}
+
+#follow{
+  padding-left: 60px;
+}
+#follow ul{
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+#follow ul li{
+  display: inline;
+  padding: 10px;
+}
+#follow ul li i{
+  font-size: 25px;
+  color: black;
+}
+#follow ul li i:hover{
+  font-size: 26px;
+  color: white;
+}
+
+footer{
+  color: black;
+}
+
+#reservation_form{
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+#reservation_form form{
+
+  margin: 40px;
+}
+#reservation_form h1{
+  text-align: center;
+  padding: 20px;
+}
