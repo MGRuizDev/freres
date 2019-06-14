@@ -1,4 +1,3 @@
-SpecialEvents/settings/local.py
 *.py[cod]
 .DS_Store
 __pycache__/

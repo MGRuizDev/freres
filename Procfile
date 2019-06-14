@@ -1,1 +1,1 @@
-web: gunicorn SpecialEvents.wsgi
+web: gunicorn FreresHeureux.wsgi
